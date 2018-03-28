@@ -2,10 +2,12 @@ var express = require('express');//connect express
 var http = require('http');//moduls http
 var path = require('path');
 var config=require('config');
+var log=require('libs/log')(module);
+
 var app = express();//create app
 app.set('port',config.get('port'));
 http.createServer(app).listen(app.get('port'), function(){
-    console.log('Express server listening on port ' + config.get('port'));
+    log.info('Express server listening on port ' + config.get('port'));
 });//Express will process all incoming requests
 
 //Middleware
