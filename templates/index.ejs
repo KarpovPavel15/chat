@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-  <head>
-    <title>Hello World</title>
-  </head>
-  <body>
-  <section class="container">
-    <%=body%>
-    <%-body%>
-  </section>
-  </body>
-</html>
+<% layout('/layout/page') -%>
+<% block('title', 'Привет ≥︺‿︺≤'); %>
+
+<p class="lead">Всем привет!</p>

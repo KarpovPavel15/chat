@@ -5,11 +5,12 @@ var config=require('config');
 var log=require('libs/log')(module);
 
 var app = express();//create app
+app.engine('ejs',require('ejs-locals'));//layout partial block
 app.set('views', path.join(__dirname, '/templates'));
 app.set('view engine', 'ejs');
 
-// all environments
-app.use(express.favicon());//read url and give favicon.ico
+// all
+app.use(express.favicon());//read url and give favicon.icoenvironments
 if(app.get('env')=='development'){
     app.use(express.logger('dev'));
 }else{
@@ -35,7 +36,7 @@ app.use(function (err,req,res,next) {
        res.send(500);
     }
 });
-/*var routes = require('./routes');
+/*var rout es = require('./routes');
 var user = require('./routes/user');
 app.get('/', routes.index);
 app.get('/users', user.list);

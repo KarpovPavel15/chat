@@ -1,6 +1,6 @@
 //configuration port
 var nconf=require('nconf');
-var path=require('path')
+var path=require('path');
 //read configuration in json file
 nconf.argv()
     .env()
