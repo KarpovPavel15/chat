@@ -1,4 +1,3 @@
-//install winston and write wrapper
 var winston = require('winston');
 var ENV = process.env.NODE_ENV;
 
